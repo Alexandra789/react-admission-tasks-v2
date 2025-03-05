@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">
+            <h1>Тестовые задания на подключение к курсу «Разработка веб-приложений на React»</h1>
+
+            <div class="dropdown">
+                <input type="checkbox" class="dropdown__switch" id="filter-switch" hidden />
+                <label for="filter-switch" class="dropdown__options-filter">
+                    <ul class="dropdown__filter" role="listbox" tabindex="-1">
+                        <li class="dropdown__filter-selected" aria-selected="true">
+                            Выберите нужное задание:
+                        </li>
+                        <li>
+                            <ul class="dropdown__select">
+                                <li class="dropdown__select-option" data-task-number="1">
+                                    Задание №1
+                                </li>
+                                <li class="dropdown__select-option" data-task-number="2">
+                                    Задание №2
+                                <li class="dropdown__select-option" data-task-number="3">
+                                    Задание №3
+                                </li>
+                                <li class="dropdown__select-option" data-task-number="4">
+                                    Задание №4
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </label>
+            </div>
+        </div>
+
+        <div class="tasks">
+            <div class="task task1 d-none">
+                <div class="task-details">
+                    <h3 class="title">Задание №1</h3>
+                    <p class="description">Написать функцию, которая получает два аргумента. 
+                        Вызвать эту функцию, передав ей "A" и "F". 
+                        Функция должна вывести в консоль буквы от "A" до "F", по одной букве в секунду. 
+                        Одновременно много таймеров (setTimeout/setInterval) не запускать, обойтись одним.
+                    </p>
+                </div>
+                <div class="task-solution">
+                    <h3 class="title">Результат:</h3>
+                    <div class="terminal">
+                        <div class="terminal__header">
+                            <div class="terminal__circles">
+                                <div class="terminal__circle terminal__circle--red"></div>
+                                <div class="terminal__circle terminal__circle--yellow"></div>
+                                <div class="terminal__circle terminal__circle--green"></div>
+                            </div>
+                            <h4 class="terminal__title">Консоль</h4>
+                        </div>
+                        <div class="terminal__body">
+                            <div class="terminal__cursor"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="task task2 d-none">
+                <div class="task-details">
+                    <h3 class="title">Задание №2</h3>
+                    <p class="description">
+                        Описать класс PoemButton в ES5-стиле ООП (т.е. функция-конструктор, методы добавлять именно в
+                        prototype
+                        класса).
+                        Конструктор класса должен получать две строки — <span>buttonCaption</span> и
+                        <span>alertText</span>
+                        и
+                        создавать
+                        на веб-странице кнопку с текстом <span>buttonCaption</span>, при нажатии на которую вызывается
+                        метод
+                        <span>buttonPressed()</span>, который в свою очередь выводит в <span>alert</span> текст
+                        <span>alertText</span>.
+                        Загрузить через <span>AJAX</span> файл
+                        <span>https://fe.it-academy.by/Examples/test_JSE.json</span>,
+                        он
+                        содержит:
+                        <code> [
+              {"buttonCaption":"строка 1","alertText":"однажды в студёную зимнюю пору"},
+              {"buttonCaption":"строка 2","alertText":"я из лесу вышел, был сильный мороз"},
+              {"buttonCaption":"строка 3","alertText":"гляжу - поднимается медленно в гору"},
+              {"buttonCaption":"строка 4","alertText":"лошадка, везущая хворосту воз"}
+            ]</code>
+                        По каждому элементу загруженного массива создать объект класса PoemButton.
+                    </p>
+                </div>
+                <div class="task-solution">
+                    <h3 class="title">Результат:</h3>
+                    <div class="button-container"></div>
+                </div>
+            </div>
+            <div class="task task3 d-none">
+                <div class="task-details">
+                    <h3 class="title">Задание №3</h3>
+                    <p class="description">
+                        Описать класс PoemButton в ES6-стиле ООП (class).
+                        Конструктор класса должен получать две строки — <span>buttonCaption</span> и
+                        <span>alertText</span>
+                        и
+                        создавать
+                        на веб-странице кнопку с текстом <span>buttonCaption</span>, при нажатии на которую вызывается
+                        метод
+                        <span>buttonPressed()</span>, который в свою очередь выводит в <span>alert</span> текст
+                        <span>alertText</span>.
+                        Загрузить через <span>AJAX</span> файл
+                        <span>https://fe.it-academy.by/Examples/test_JSE.json</span>,
+                        он
+                        содержит:
+                        <code> [
+          {"buttonCaption":"строка 1","alertText":"однажды в студёную зимнюю пору"},
+          {"buttonCaption":"строка 2","alertText":"я из лесу вышел, был сильный мороз"},
+          {"buttonCaption":"строка 3","alertText":"гляжу - поднимается медленно в гору"},
+          {"buttonCaption":"строка 4","alertText":"лошадка, везущая хворосту воз"}
+        ]</code>
+                        По каждому элементу загруженного массива создать объект класса PoemButton.
+                    </p>
+                </div>
+                <div class="task-solution">
+                    <h3 class="title">Результат:</h3>
+                    <div class="button-container"></div>
+                </div>
+            </div>
+            <div class="task task4 d-none">
+                <div class="task-details">
+                    <h3 class="title">Задание №4</h3>
+                    <p class="description">
+                        Загрузить через <span>AJAX</span> файл
+                        <span>https://fe.it-academy.by/Examples/test_JSE.txt</span>.
+                        Регулярным выражением найти в загруженном тексте все валидные строковые константы JavaScript и
+                        вывести
+                        их в
+                        консоль.
+                        В консоли должно получиться:
+                        <code>
+                "hello привет!"</br>
+                'goodbye пока'</br>
+                "hello привет\ngoodbye пока"</br>
+                "hello привет\"goodbye пока"</br>
+                'hello привет\'goodbye пока'</br>
+                "hello привет'goodbye пока"</br>
+                'hello привет"goodbye пока'</br>
+                "hello привет\'goodbye пока\"снова hello"</br>
+                'hello привет\\goodbye пока'</br>
+                "Она подарила ему своё \u2665, потому что у него было много \xA5"
+            </code>
+                    </p>
+                </div>
+                <div class="task-solution">
+                    <h3 class="title">Результат:</h3>
+                    <div class="terminal">
+                        <div class="terminal__header">
+                            <div class="terminal__circles">
+                                <div class="terminal__circle terminal__circle--red"></div>
+                                <div class="terminal__circle terminal__circle--yellow"></div>
+                                <div class="terminal__circle terminal__circle--green"></div>
+                            </div>
+                            <h4 class="terminal__title">Консоль</h4>
+                        </div>
+                        <div class="terminal__body terminal__body--height">
+                            <div class="terminal__cursor"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
