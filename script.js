@@ -39,16 +39,15 @@ function task1() {
         const lastLetterCode = lastLetter.charCodeAt(0) + 1;
         let currentCode = firstLetterCode;
 
-
-        function logCharactersWithDelay() {
+        const intervalId = setInterval(() => {
             if (currentCode < lastLetterCode) {
                 console.log(String.fromCharCode(currentCode));
                 terminalBody.innerHTML += `<p>${String.fromCharCode(currentCode)}</p>`;
                 currentCode++;
+            } else {
+                clearInterval(intervalId);
             }
-
-        }
-        setInterval(() => { logCharactersWithDelay(); }, 1000);
+        }, 1000);
     }
     logMessage('A', 'F');
 }
