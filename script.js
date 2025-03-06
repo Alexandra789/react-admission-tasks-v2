@@ -45,11 +45,10 @@ function task1() {
                 console.log(String.fromCharCode(currentCode));
                 terminalBody.innerHTML += `<p>${String.fromCharCode(currentCode)}</p>`;
                 currentCode++;
-                setTimeout(() => logCharactersWithDelay(), 1000);
             }
 
         }
-        logCharactersWithDelay();
+        setInterval(() => { logCharactersWithDelay(); }, 1000);
     }
     logMessage('A', 'F');
 }
@@ -94,7 +93,7 @@ function task2() {
 function task3() {
     const btnContainer = document.querySelector('.task3 .button-container');
     btnContainer.innerHTML = '';
-    
+
     class PoemButton {
         constructor(buttonCaption, alertText) {
             this.buttonCaption = buttonCaption;
@@ -146,7 +145,7 @@ function task4() {
         } else {
             const text = xhr.response;
 
-            const regex = /(["'])(?:(?=(\\?))\2.)*?\1/g;;
+            const regex = /(["'])(?:(?=(\\?))\2.)*?\1/g;
             const matches = text.match(regex);
 
             if (matches) {
