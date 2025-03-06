@@ -146,7 +146,7 @@ function task4() {
         } else {
             const text = xhr.response;
 
-            const regex = /(['"])(.*?)\1/g;
+            const regex = /(["'])(?:(?=(\\?))\2.)*?\1/g;;
             const matches = text.match(regex);
 
             if (matches) {
